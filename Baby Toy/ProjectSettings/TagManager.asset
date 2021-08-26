@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1857493753
+    locked: 0
+  - name: RightLeg
+    uniqueID: 2827100029
+    locked: 0
+  - name: LeftLeg
+    uniqueID: 2971129693
+    locked: 0
