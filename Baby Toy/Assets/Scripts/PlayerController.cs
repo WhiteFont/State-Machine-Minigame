@@ -33,12 +33,17 @@ public class PlayerController : MonoBehaviour
     public float xOffset;
     public float yOffset;
 
+    public bool aReady;
+    public bool dReady;
+
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         extraDashes = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        aReady = false;
+        dReady = true;
     }
 
     private void FixedUpdate()
@@ -58,10 +63,26 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire3") && extraDashes > 0)
+        if (dReady)
         {
-            Dash();
-            extraDashes--;
+            if (Input.GetKeyDown(KeyCode.D) && extraDashes > 0)
+            {
+                
+                Dash();
+                extraDashes--;
+                aReady = true;
+                dReady = false;
+            }
+        }
+        else if (aReady)
+        {
+            if (Input.GetKeyDown(KeyCode.A) && extraDashes > 0)
+            {
+                Dash();
+                extraDashes--;
+                dReady = true;
+                aReady = false;
+            }
         }
 
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
