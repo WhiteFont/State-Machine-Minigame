@@ -216,6 +216,14 @@ MonoBehaviour:
   regularGravity: 2
   xOffset: 0
   yOffset: 0
+  aReady: 0
+  dReady: 0
+  spriteList:
+  - {fileID: 8607472917887628970, guid: 6fc5ddf8e8c68c54fa5748d061dd5a4b, type: 3}
+  - {fileID: -3268204846407159661, guid: 6fc5ddf8e8c68c54fa5748d061dd5a4b, type: 3}
+  - {fileID: -8723013705222493608, guid: 6fc5ddf8e8c68c54fa5748d061dd5a4b, type: 3}
+  - {fileID: 7141165642691641552, guid: 6fc5ddf8e8c68c54fa5748d061dd5a4b, type: 3}
+  currentSprite: 0
 --- !u!212 &394197313
 SpriteRenderer:
   m_ObjectHideFlags: 0

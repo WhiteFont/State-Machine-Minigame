@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
 
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
 
     private bool facingRight = true;
 
@@ -36,14 +37,19 @@ public class PlayerController : MonoBehaviour
     public bool aReady;
     public bool dReady;
 
+    public List<Sprite> spriteList;
+    public int currentSprite;
+
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         extraDashes = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         aReady = false;
         dReady = true;
+        currentSprite = 0;
     }
 
     private void FixedUpdate()
@@ -67,7 +73,6 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D) && extraDashes > 0)
             {
-                
                 Dash();
                 extraDashes--;
                 aReady = true;
@@ -128,7 +133,13 @@ public class PlayerController : MonoBehaviour
     {
             if (facingRight)
             {
-                rb.AddForce(new Vector2(1f * dashDistance, 0f));  
+                currentSprite++;
+                if (currentSprite >= spriteList.Count - 1)
+            {
+                currentSprite = 0;
+            }
+            sr.sprite = spriteList[currentSprite];
+            rb.AddForce(new Vector2(1f * dashDistance, 0f));  
             }  else if (!facingRight){
             rb.AddForce(new Vector2(-1f * dashDistance, 0f));
             }
