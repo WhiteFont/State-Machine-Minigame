@@ -50,3 +50,9 @@ TagManager:
   - name: LeftLeg
     uniqueID: 2971129693
     locked: 0
+  - name: RightArm
+    uniqueID: 2720403869
+    locked: 0
+  - name: LeftArm
+    uniqueID: 1943879035
+    locked: 0
