@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviour
             if (facingRight)
             {
                 currentSprite++;
-                if (currentSprite >= spriteList.Count - 1)
+                if (currentSprite >= 4)
             {
                 currentSprite = 0;
             }
