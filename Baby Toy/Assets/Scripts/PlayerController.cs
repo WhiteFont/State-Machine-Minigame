@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator instructionTextAnimation;
+
     public float speed;
     public float groundSpeed;
     public float floatSpeed;
@@ -69,6 +71,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2) || Input.GetMouseButton(3) || Input.GetMouseButton(4) || Input.GetMouseButtonDown(5) || Input.GetMouseButtonDown(6)))
+        {
+            instructionTextAnimation.SetBool("FirstInput", true);
+        }
         if (dReady)
         {
             if (Input.GetKeyDown(KeyCode.D) && extraDashes > 0)
@@ -134,7 +141,7 @@ public class PlayerController : MonoBehaviour
             if (facingRight)
             {
                 currentSprite++;
-                if (currentSprite >= spriteList.Count - 1)
+                if (currentSprite >= 4)
             {
                 currentSprite = 0;
             }
