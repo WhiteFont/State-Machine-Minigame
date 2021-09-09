@@ -183,5 +183,6 @@ MonoBehaviour:
   yOffset: 0
   aReady: 0
   dReady: 0
-  spriteList: []
+  spriteList:
+  - {fileID: 9055610283659109065, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
   currentSprite: 0
