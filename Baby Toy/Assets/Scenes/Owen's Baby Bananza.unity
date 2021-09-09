@@ -349,6 +349,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1168978485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8039214429986445540, guid: 6a29b37723c09304ebeed1e2932ccfad,
+    type: 3}
+  m_PrefabInstance: {fileID: 8039214430458433501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1172851024
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +880,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
         type: 3}
+      propertyPath: aReady
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
+        type: 3}
+      propertyPath: dReady
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
+        type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1168978485}
+    - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
+        type: 3}
+      propertyPath: dashDistance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
+        type: 3}
       propertyPath: instructionTextAnimation
       value: 
       objectReference: {fileID: 1417901621}
@@ -890,7 +916,7 @@ PrefabInstance:
     - target: {fileID: 8039214430980377971, guid: 6a29b37723c09304ebeed1e2932ccfad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -2.019
       objectReference: {fileID: 0}
     - target: {fileID: 8039214430980377971, guid: 6a29b37723c09304ebeed1e2932ccfad,
         type: 3}

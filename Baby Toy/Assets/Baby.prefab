@@ -129,30 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructionTextAnimation: {fileID: 0}
-  speed: 15
-  groundSpeed: 15
-  floatSpeed: 5
-  jumpForce: 10
+  speed: 2
   groundCheck: {fileID: 8039214429986445540}
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  extraJumpsValue: 0
-  extraDashesValue: 1
-  dashDistance: 1000
-  floatGravity: 0
-  regularGravity: 2
-  xOffset: 0
-  yOffset: 0
-  aReady: 0
-  dReady: 0
   spriteList:
   - {fileID: -8186917630627674021, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
   - {fileID: 6393431691594963058, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
   - {fileID: -3364756006525291005, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
   - {fileID: -3324933595994040840, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
-  currentSprite: 0
+  dashDistance: 0.25
 --- !u!61 &8039214430980377974
 BoxCollider2D:
   m_ObjectHideFlags: 0
