@@ -869,6 +869,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
         type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039214430980377969, guid: 6a29b37723c09304ebeed1e2932ccfad,
+        type: 3}
       propertyPath: instructionTextAnimation
       value: 
       objectReference: {fileID: 1417901621}

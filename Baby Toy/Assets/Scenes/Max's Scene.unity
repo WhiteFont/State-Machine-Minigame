@@ -335,24 +335,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructionTextAnimation: {fileID: 492070130}
-  speed: 15
-  groundSpeed: 15
-  floatSpeed: 5
-  jumpForce: 10
+  speed: 2
   groundCheck: {fileID: 610307475}
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  extraJumpsValue: 0
-  extraDashesValue: 1
-  dashDistance: 1000
-  floatGravity: 0
   regularGravity: 2
   xOffset: 0
   yOffset: 0
-  aReady: 0
-  dReady: 0
   spriteList:
   - {fileID: 9055610283659109065, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
   - {fileID: -8186917630627674021, guid: 7a15af8743bfbbe4c9d4b2b5bd9b2144, type: 3}
