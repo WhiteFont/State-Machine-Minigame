@@ -4766,6 +4766,7 @@ GameObject:
   - component: {fileID: 5850106869561198489}
   - component: {fileID: 5850106869561198488}
   - component: {fileID: 3400988949659440441}
+  - component: {fileID: 1099674563}
   m_Layer: 0
   m_Name: castle
   m_TagString: Untagged
@@ -4826,7 +4827,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 638852423407423141, guid: 17bffabcc5314a1408eecb8c1660ed6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4883,3 +4884,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7389622, y: 2.0720577}
   m_EdgeRadius: 0
+--- !u!114 &1099674563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5850106869561198495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be92289ea86cba41aadf4f5e97bf96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 714839129376265710}
+  baby: {fileID: 0}
