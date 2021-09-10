@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: d8ea79b3525e1d848bfa6795d6e695f8
+guid: 34615d8921e8db342a613877f278559d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -362537944700837082
-    second: mom2_0
+      213: -8922273578998789687
+    second: momWalking_0
   - first:
-      213: 6427427708497923571
-    second: mom2_1
+      213: -5921923278413503784
+    second: momWalking_1
   - first:
-      213: -1700234988469585388
-    second: mom2_2
+      213: -7839287374172343740
+    second: momWalking_2
   - first:
-      213: 2986300255843051149
-    second: mom2_3
+      213: -8423172835111880379
+    second: momWalking_3
   - first:
-      213: 4630654526198113899
-    second: mom2_4
+      213: -4828230843848120130
+    second: momWalking_4
   - first:
-      213: -3660546426774291725
-    second: mom2_5
+      213: 675172402546596539
+    second: momWalking_5
   - first:
-      213: 7544008826834775561
-    second: mom2_6
+      213: 6465036525292530896
+    second: momWalking_6
   - first:
-      213: -3563691267393464513
-    second: mom2_7
+      213: 29587560028717688
+    second: momWalking_7
   - first:
-      213: -5869392555582264031
-    second: mom2_8
+      213: 4900559126822510314
+    second: momWalking_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,7 +115,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,7 +127,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,12 +138,96 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mom2_0
+      name: momWalking_0
       rect:
         serializedVersion: 2
-        x: 39
+        x: 67
+        y: 60
+        width: 251
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c98ceeb377bd2480800000000000000
+      internalID: -8922273578998789687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momWalking_1
+      rect:
+        serializedVersion: 2
+        x: 496
         y: 56
-        width: 253
+        width: 232
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2eb0b672a11dda0800000000000000
+      internalID: -5921923278413503784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momWalking_2
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 60
+        width: 297
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442b042eaa1453390800000000000000
+      internalID: -7839287374172343740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momWalking_3
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 56
+        width: 264
+        height: 779
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549bf613fe0ea1b80800000000000000
+      internalID: -8423172835111880379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momWalking_4
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 56
+        width: 211
         height: 784
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 623a18cf8a108faf0800000000000000
-      internalID: -362537944700837082
+      spriteID: eb829dae0adaefcb0800000000000000
+      internalID: -4828230843848120130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mom2_1
+      name: momWalking_5
       rect:
         serializedVersion: 2
-        x: 506
+        x: 2062
         y: 56
-        width: 234
-        height: 782
+        width: 274
+        height: 784
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,124 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd8588627fc23950800000000000000
-      internalID: 6427427708497923571
+      spriteID: bbadfef09b1be5900800000000000000
+      internalID: 675172402546596539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mom2_2
+      name: momWalking_6
       rect:
         serializedVersion: 2
-        x: 860
-        y: 56
-        width: 302
-        height: 774
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41a7495494d8768e0800000000000000
-      internalID: -1700234988469585388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mom2_3
-      rect:
-        serializedVersion: 2
-        x: 1281
+        x: 2456
         y: 58
-        width: 254
-        height: 780
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d86ee26b248717920800000000000000
-      internalID: 2986300255843051149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mom2_4
-      rect:
-        serializedVersion: 2
-        x: 1693
-        y: 56
-        width: 220
-        height: 786
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b66e79fd1c3634040800000000000000
-      internalID: 4630654526198113899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mom2_5
-      rect:
-        serializedVersion: 2
-        x: 2071
-        y: 58
-        width: 300
-        height: 782
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fafa445b60233dc0800000000000000
-      internalID: -3660546426774291725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mom2_6
-      rect:
-        serializedVersion: 2
-        x: 2422
-        y: 56
-        width: 364
-        height: 775
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90ee5e1ee04b1b860800000000000000
-      internalID: 7544008826834775561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mom2_7
-      rect:
-        serializedVersion: 2
-        x: 2835
-        y: 56
-        width: 354
+        width: 313
         height: 777
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f37d9dd6ca93b8ec0800000000000000
-      internalID: -3563691267393464513
+      spriteID: 0dcacfd677c68b950800000000000000
+      internalID: 6465036525292530896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mom2_8
+      name: momWalking_7
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 56
-        width: 291
-        height: 784
+        x: 2851
+        y: 60
+        width: 334
+        height: 773
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,8 +299,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12d623d619abb8ea0800000000000000
-      internalID: -5869392555582264031
+      spriteID: 8724845aabd196000800000000000000
+      internalID: 29587560028717688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: momWalking_8
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 56
+        width: 294
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeedd03cf88420440800000000000000
+      internalID: 4900559126822510314
       vertices: []
       indices: 
       edges: []
@@ -337,8 +337,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
   spritePackingTag: 
-  pSDRemoveMatte: 1
-  pSDShowRemoveMatteOption: 1
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
