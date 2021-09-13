@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PatrolPoint
   layers:
   - Default
   - TransparentFX
@@ -44,15 +45,15 @@ TagManager:
   - name: Background
     uniqueID: 1857493753
     locked: 0
-  - name: RightLeg
+  - name: mid-back
     uniqueID: 2827100029
     locked: 0
-  - name: LeftLeg
+  - name: Middleground
     uniqueID: 2971129693
     locked: 0
-  - name: RightArm
+  - name: Fore-mid
     uniqueID: 2720403869
     locked: 0
-  - name: LeftArm
+  - name: Foreground
     uniqueID: 1943879035
     locked: 0
