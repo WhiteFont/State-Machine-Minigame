@@ -142,27 +142,26 @@ public class Patrol : State
 
         if ((ppointLeft.transform.position.x - npc.transform.position.x) < 0.2f && facingLeft)
         {
+            npc.transform.Translate((-Time.deltaTime) * 2, 0, 0);
             Debug.Log("moving left");
-            Debug.Log(npc.transform.position.x);
-            npc.transform.Translate(Time.deltaTime, 0, 0);
         }
         else if (facingLeft)
         { 
-            Debug.Log("turning right");
             anim.SetTrigger("TurnRight");
             facingLeft = false;
+            Debug.Log("turning right");
         }
 
         if ((npc.transform.position.x - ppointRight.transform.position.x) < 0.2f && !facingLeft)
         {
+            npc.transform.Translate((Time.deltaTime) * 2, 0, 0);
             Debug.Log("moving right");
-            npc.transform.Translate(new Vector2(1, 0) * Time.deltaTime);
         }
         else if (!facingLeft)
         {
-            Debug.Log("turning left");
             anim.SetTrigger("TurnLeft");
             facingLeft = true;
+            Debug.Log("turning left");
         }
     }
 
