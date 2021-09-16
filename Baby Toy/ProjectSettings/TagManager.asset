@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PatrolPoint
   layers:
   - Default
   - TransparentFX
@@ -14,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - Player
   - 
   - 
   - 
