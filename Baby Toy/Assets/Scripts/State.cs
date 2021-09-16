@@ -154,7 +154,7 @@ public class Patrol : State
 
         if ((npc.transform.position.x - ppointRight.transform.position.x) < 0.2f && !facingLeft)
         {
-            npc.transform.Translate((Time.deltaTime) * 2, 0, 0);
+            npc.transform.Translate(-(Time.deltaTime) * 2, 0, 0);
             Debug.Log("moving right");
         }
         else if (!facingLeft)
