@@ -12,12 +12,18 @@ public class AI : MonoBehaviour
     public GameObject npc;
     State currentState;
 
+    public Transform hold;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
         currentState = new Patrol(this.gameObject, anim, player, ppointLeft, ppointRight);
+    }
+
+    public void SeeBaby()
+    {
+        currentState.found = true;
     }
 
     // Update is called once per frame
