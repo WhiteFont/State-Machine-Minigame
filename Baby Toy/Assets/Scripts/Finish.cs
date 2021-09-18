@@ -12,6 +12,8 @@ public class Finish : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         particles.Play();
-        baby.SetActive(false);   
+        baby.SetActive(false);
+        
+        //add more game ending stuff here.
     }
 }

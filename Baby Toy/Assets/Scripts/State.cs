@@ -110,9 +110,7 @@ public class Patrol : State
         }
         else if (facingLeft)
         { 
-            //anim.SetTrigger("TurnRight");
             facingLeft = false;
-            //adam changed the turn around mechanic because it was causing issues instead of using animator it is hardcoded
             npc.transform.Rotate(0,180,0);
             
             Debug.Log("turning right");
@@ -125,9 +123,7 @@ public class Patrol : State
         }
         else if (!facingLeft)
         {
-            //anim.SetTrigger("TurnLeft");
             facingLeft = true;
-            //adam changed the turn around mechanic because it was causing issues instead of using animator it is hardcoded
             npc.transform.Rotate(0,180,0);
             Debug.Log("turning left");
         }
