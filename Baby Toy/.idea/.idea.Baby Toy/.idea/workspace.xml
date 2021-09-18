@@ -23,8 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11539a9a-338e-4d80-bb3a-4a62dfa80032" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Baby Toy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Baby Toy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Person 1.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Person 1.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/State.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +86,7 @@
       <workItem from="1630985143595" duration="13000" />
       <workItem from="1631950233878" duration="2795000" />
       <workItem from="1631956111502" duration="403000" />
-      <workItem from="1631984442790" duration="523000" />
+      <workItem from="1631984442790" duration="6553000" />
     </task>
     <servers />
   </component>

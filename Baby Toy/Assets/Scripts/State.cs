@@ -145,7 +145,7 @@ public class Chase : State
 
     public override void Enter()
     {
-        anim.SetTrigger("Found");
+        //anim.SetTrigger("Found");
         anim.SetTrigger("Chase");
         base.Enter();
     }
@@ -156,7 +156,7 @@ public class Chase : State
         {
             npc.transform.Translate(-(Time.deltaTime) * 3, 0, 0);
             Debug.Log("chasing left");
-            if ((npc.transform.position.x - player.transform.position.x) < 0.2f)
+            if ((npc.transform.position.x - player.transform.position.x) < 3f)
             {
                 nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
                 stage = EVENT.EXIT;
@@ -166,7 +166,7 @@ public class Chase : State
         {
             npc.transform.Translate(-(Time.deltaTime) * 3, 0, 0);
             Debug.Log("chasing right");
-            if ((player.transform.position.x - npc.transform.position.x) < 0.2f)
+            if ((player.transform.position.x - npc.transform.position.x) < 3f)
             {
                 nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
                 stage = EVENT.EXIT;
@@ -194,13 +194,12 @@ public class PickUp : State
     public override void Enter()
     {
         holdBaby = npc.transform.Find("HoldBaby").gameObject;
-        player.transform.position = holdBaby.transform.position;
+        
         rb = player.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
-
         pmScript = player.GetComponent<PlayerController>();
         pmScript.Grabbed();
-
+        
         anim.SetTrigger("PickUp");
         anim.SetTrigger("Hold");
         base.Enter();
@@ -208,6 +207,7 @@ public class PickUp : State
 
     public override void Update()
     {
+        player.transform.position = holdBaby.transform.position;
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Hold"))
         {
             nextState = new Hold(npc, anim, player, ppointLeft, ppointRight);
