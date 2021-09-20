@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     public Animator instructionTextAnimation;
 
     public float speed;
@@ -29,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     public float dashDistance;
 
+    private bool isGrabbed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,16 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         currentSprite = 0;
     }
+
+    public void Grabbed()
+    {
+        isGrabbed = true;
+    }
+
+    public void Dropped()
+    {
+        isGrabbed = false;
+    }    
 
     private void FixedUpdate()
     {
@@ -57,31 +68,37 @@ public class PlayerController : MonoBehaviour
             //instructionTextAnimation.SetBool("FirstInput", true);
         }
 
-        if (aReady)
+        if (!isGrabbed)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (aReady)
             {
-                Dash();
-                dReady = true;
-                aReady = false;
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    Dash();
+                    dReady = true;
+                    aReady = false;
+                }
+            }
+
+            if (dReady)
+            {
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    Dash();
+                    aReady = true;
+                    dReady = false;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Flip();
             }
         }
-
-        if (dReady)
+        else if (isGrabbed)
         {
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Dash();
-                aReady = true;
-                dReady = false;
-            }
+            
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Flip();
-        }
-
     }
 
     private void Flip()
