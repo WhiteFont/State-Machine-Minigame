@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.anyKey && !(Input.GetMouseButton(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2) || Input.GetMouseButton(3) || Input.GetMouseButton(4) || Input.GetMouseButtonDown(5) || Input.GetMouseButtonDown(6)))
         {
-            //instructionTextAnimation.SetBool("FirstInput", true);
+            instructionTextAnimation.SetBool("FirstInput", true);
         }
 
         if (!isGrabbed)
