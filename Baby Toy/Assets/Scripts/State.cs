@@ -155,7 +155,7 @@ public class Chase : State
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") && (npc.transform.position.x - player.transform.position.x) > 0.2f)
         {
-            npc.transform.Translate(-(Time.deltaTime) * 3, 0, 0);
+            npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
             //Debug.Log("chasing left");
             if ((npc.transform.position.x - player.transform.position.x) < 3f)
             {
@@ -165,13 +165,19 @@ public class Chase : State
         }
         else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") && (player.transform.position.x - npc.transform.position.x) > 0.2f)
         {
-            npc.transform.Translate(-(Time.deltaTime) * 3, 0, 0);
+            npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
             //Debug.Log("chasing right");
             if ((player.transform.position.x - npc.transform.position.x) < 3f)
             {
                 nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
                 stage = EVENT.EXIT;
             }
+        }
+
+        if (player.transform.position.x < -33f)
+        {
+            nextState = new Patrol(npc, anim, player, ppointLeft, ppointRight);
+            stage = EVENT.EXIT;
         }
     }
 
@@ -236,15 +242,19 @@ public class Hold : State
         holdBaby = npc.transform.Find("HoldBaby").gameObject;
 
         anim.SetTrigger("Hold");
+
         base.Enter();
     }
 
     public override void Update()
     {
+
         player.transform.position = holdBaby.transform.position;
 
-        if (npc.transform.position.x > -31f)
+
+        if (npc.transform.position.x > -31.5f)
         {
+            npc.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
             npc.transform.Translate(-(Time.deltaTime) * 3, 0, 0);
         }
         else if (npc.transform.position.x < -31f)
@@ -279,22 +289,18 @@ public class Drop : State
         pmScript = player.GetComponent<PlayerController>();
         pmScript.Dropped();
 
-        npc.transform.Rotate(0, 180, 0);
-
-        Debug.Log("turning right");
         anim.SetTrigger("Stun");
         base.Enter();
     }
 
     public override void Update()
     {
-        if (npc.transform.position.x  <= -31f)
+        if (npc.transform.position.x  > -32f)
         {
             npc.transform.Translate(-(Time.deltaTime) * 2, 0, 0);
         }
         else
         {
-            anim.SetTrigger("Patrol");
             nextState = new Patrol(npc, anim, player, ppointLeft, ppointRight);
             stage = EVENT.EXIT;
         }
