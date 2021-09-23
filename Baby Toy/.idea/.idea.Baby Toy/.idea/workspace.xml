@@ -24,10 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="11539a9a-338e-4d80-bb3a-4a62dfa80032" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Baby Toy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Baby Toy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Finish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEnvironment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEnvironment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/State.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Vision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Vision.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <workItem from="1631956111502" duration="403000" />
       <workItem from="1631984442790" duration="6553000" />
       <workItem from="1632356782224" duration="5918000" />
-      <workItem from="1632423239812" duration="3102000" />
+      <workItem from="1632423239812" duration="4064000" />
     </task>
     <servers />
   </component>
@@ -123,10 +119,10 @@
           <line>297</line>
           <properties documentPath="D:\BSU\GIMM 400\statemachineGame\State-Machine-Minigame\Baby Toy\Assets\Scripts\State.cs" initialLine="292" containingFunctionPresentation="method 'Enter'">
             <startOffsets>
-              <option value="7875" />
+              <option value="7867" />
             </startOffsets>
             <endOffsets>
-              <option value="7875" />
+              <option value="7867" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
