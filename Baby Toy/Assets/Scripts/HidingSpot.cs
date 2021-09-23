@@ -6,20 +6,28 @@ public class HidingSpot : MonoBehaviour
 {
 
     public GameObject baby;
-    public GameObject vision;
+    public GameObject dadVision;
+    public GameObject momVision;
 
-    BoxCollider2D visionCollider;
-
+    private BoxCollider2D visionCollider1;
+    private BoxCollider2D visionCollider2;
+    private SpriteRenderer babySprite;
+    private Color babyColor;
     public void Start()
     {
-       visionCollider = vision.GetComponent<BoxCollider2D>();
+       visionCollider1 = momVision.GetComponent<BoxCollider2D>();
+       visionCollider2 = dadVision.GetComponent<BoxCollider2D>();
+       babySprite = baby.GetComponent<SpriteRenderer>();
+       babyColor.a = 0.5f;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Baby")
+        if (other.CompareTag("Baby"))
         {
-            visionCollider.enabled = false;
+            visionCollider1.enabled = false;
+            visionCollider2.enabled = false;
+            babySprite.color -= babyColor;
         }
         Debug.Log("hidden");
 
@@ -27,9 +35,11 @@ public class HidingSpot : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Baby")
+        if (collision.CompareTag("Baby"))
         {
-            visionCollider.enabled = true;
+            visionCollider1.enabled = true;
+            visionCollider2.enabled = true;
+            babySprite.color += babyColor;
         }
     }
 }

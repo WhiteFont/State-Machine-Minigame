@@ -242,7 +242,7 @@ public class Hold : State
         holdBaby = npc.transform.Find("HoldBaby").gameObject;
 
         anim.SetTrigger("Hold");
-
+        Vision.holdingBaby = true;
         base.Enter();
     }
 
@@ -290,6 +290,7 @@ public class Drop : State
         pmScript.Dropped();
 
         anim.SetTrigger("Stun");
+        Vision.holdingBaby = false;
         base.Enter();
     }
 

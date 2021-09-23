@@ -5,11 +5,13 @@ using UnityEngine;
 public class Vision : MonoBehaviour
 {
     AI ai;
+    public static bool holdingBaby = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        ai = GameObject.FindGameObjectWithTag("npc").GetComponent<AI>();
-
-        if (other.tag == "Baby")
+        //ai = GameObject.FindGameObjectWithTag("npc").GetComponent<AI>();
+        ai = this.GetComponentInParent<AI>();
+        
+        if (other.CompareTag("Baby") && !holdingBaby)
         {
             ai.SeeBaby();
         }
