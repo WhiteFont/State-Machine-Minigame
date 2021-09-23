@@ -153,31 +153,36 @@ public class Chase : State
 
     public override void Update()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") && (npc.transform.position.x - player.transform.position.x) > 0.2f)
+        if (!GameEnvironment.Singleton.holdingBaby)
         {
-            npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
-            //Debug.Log("chasing left");
-            if ((npc.transform.position.x - player.transform.position.x) < 3f)
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") &&
+                (npc.transform.position.x - player.transform.position.x) > 0.2f)
             {
-                nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
-                stage = EVENT.EXIT;
+                npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
+                //Debug.Log("chasing left");
+                if ((npc.transform.position.x - player.transform.position.x) < 3f)
+                {
+                    nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
+                    stage = EVENT.EXIT;
+                }
             }
-        }
-        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") && (player.transform.position.x - npc.transform.position.x) > 0.2f)
-        {
-            npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
-            //Debug.Log("chasing right");
-            if ((player.transform.position.x - npc.transform.position.x) < 3f)
+            else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chase") &&
+                     (player.transform.position.x - npc.transform.position.x) > 0.2f)
             {
-                nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
-                stage = EVENT.EXIT;
+                npc.transform.Translate(-(Time.deltaTime) * 8, 0, 0);
+                //Debug.Log("chasing right");
+                if ((player.transform.position.x - npc.transform.position.x) < 3f)
+                {
+                    nextState = new PickUp(npc, anim, player, ppointLeft, ppointRight);
+                    stage = EVENT.EXIT;
+                }
             }
-        }
 
-        if (player.transform.position.x < -33f)
-        {
-            nextState = new Patrol(npc, anim, player, ppointLeft, ppointRight);
-            stage = EVENT.EXIT;
+            if (player.transform.position.x < -33f)
+            {
+                nextState = new Patrol(npc, anim, player, ppointLeft, ppointRight);
+                stage = EVENT.EXIT;
+            }
         }
     }
 
@@ -242,7 +247,7 @@ public class Hold : State
         holdBaby = npc.transform.Find("HoldBaby").gameObject;
 
         anim.SetTrigger("Hold");
-        Vision.holdingBaby = true;
+        GameEnvironment.Singleton.holdingBaby = true;
         base.Enter();
     }
 
@@ -250,7 +255,7 @@ public class Hold : State
     {
 
         player.transform.position = holdBaby.transform.position;
-
+        
 
         if (npc.transform.position.x > -31.5f)
         {
@@ -290,7 +295,7 @@ public class Drop : State
         pmScript.Dropped();
 
         anim.SetTrigger("Stun");
-        Vision.holdingBaby = false;
+        GameEnvironment.Singleton.holdingBaby = false;
         base.Enter();
     }
 

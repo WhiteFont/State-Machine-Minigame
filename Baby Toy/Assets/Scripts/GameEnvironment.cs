@@ -8,6 +8,7 @@ public class GameEnvironment
     private static GameEnvironment instance;
     private List<GameObject> patrolPoints = new List<GameObject>();
     public List<GameObject> PatrolPoints { get { return patrolPoints; } }
+    public bool holdingBaby = false;
 
     public static GameEnvironment Singleton
     {

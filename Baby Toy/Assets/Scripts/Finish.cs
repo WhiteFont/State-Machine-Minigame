@@ -13,6 +13,7 @@ public class Finish : MonoBehaviour
     {
         particles.Play();
         baby.SetActive(false);
+        
         //add more game ending stuff here.
     }
 }
