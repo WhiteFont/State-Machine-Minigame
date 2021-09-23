@@ -13,11 +13,13 @@ public class TriggerCamera : MonoBehaviour
         if (!flip)
         {
             cam.transform.position += new Vector3(xOffset, 0, 0);
+            gameObject.transform.position += new Vector3(-3, 0, 0);
             flip = true;
         }
         else if (flip)
         {
             cam.transform.position += new Vector3(-xOffset, 0, 0);
+            gameObject.transform.position += new Vector3(3, 0, 0);
             flip = false;
         }
     }
