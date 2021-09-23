@@ -14,11 +14,36 @@ public class AI : MonoBehaviour
 
     public Transform hold;
 
+    public GameObject[] dadTalk;
+    public GameObject dad;
+    public GameObject speechContainer;
+    private bool flipped;
+    private int random;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = this.GetComponent<Animator>();
         currentState = new Patrol(this.gameObject, anim, player, ppointLeft, ppointRight);
+        StartCoroutine(DadTalk());
+    }
+
+    private IEnumerator DadTalk()
+    {
+        while (currentState.ToString() == "Patrol")
+        {
+            if (currentState.ToString() == "Patrol")
+            {
+                random = Random.Range(0, 4);
+                dadTalk[random].SetActive(true);
+            }
+
+            yield return new WaitForSeconds(2);
+
+            dadTalk[random].SetActive(false);
+
+            yield return new WaitForSeconds(3);
+        }
     }
 
     public void SeeBaby()
@@ -30,5 +55,17 @@ public class AI : MonoBehaviour
     void Update()
     {
         currentState = currentState.Process();
+
+        if (dad.transform.rotation.y < 0 && flipped)
+        {
+            speechContainer.transform.Rotate(0, 180, 0);
+            flipped = false;
+        }
+
+        if (dad.transform.rotation.y > 0 && !flipped)
+        {
+            speechContainer.transform.Rotate(0, 180, 0);
+            flipped = true;
+        }
     }
 }
