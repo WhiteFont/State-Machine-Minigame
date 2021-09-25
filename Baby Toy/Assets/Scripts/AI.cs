@@ -20,6 +20,9 @@ public class AI : MonoBehaviour
     private bool flipped;
     private int random;
 
+    public AudioSource MainMusic;
+    public AudioSource CaughtMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +70,25 @@ public class AI : MonoBehaviour
             speechContainer.transform.Rotate(0, 180, 0);
             flipped = true;
         }
+
+        if (currentState.ToString() == "Chase")
+        {
+            if (!CaughtMusic.isPlaying)
+            {
+                CaughtMusic.Play();
+                MainMusic.Stop();
+            }
+        }
+
+        if (currentState.ToString() == "Hold")
+        {
+            if (CaughtMusic.isPlaying)
+            {
+                CaughtMusic.Stop();
+                MainMusic.Play();
+            }
+        }
+
+        print(currentState.ToString());
     }
 }
