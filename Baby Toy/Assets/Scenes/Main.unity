@@ -2365,8 +2365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0003031625, y: -4.1000013}
-  m_SizeDelta: {x: 942.00116, y: 111.88356}
+  m_AnchoredPosition: {x: 0.0003031625, y: 3}
+  m_SizeDelta: {x: 942.00116, y: 245.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1048303784
 Animator:
@@ -2419,7 +2419,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alternate "A" + "D" to Crawl!
+  m_Text: 'Alternate "A" + "D" to Crawl!
+
+    Press "Spacebar" to turn around!'
 --- !u!222 &1048303786
 CanvasRenderer:
   m_ObjectHideFlags: 0
